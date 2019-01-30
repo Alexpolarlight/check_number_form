@@ -1,7 +1,8 @@
 <label>
   <div class="form_box">
-    <div class = "nok_item" [class.special] = "isSpecial" [ngStyle]="currentStyles"><p>NOK:</p></div>
+    <div class = "nok_item" [style.color] = "isSpecial ? 'red' : 'green'"><p>NOK:</p></div>
     <input type="number" [formControl]="number">
 </div>
 </label>
 <!-- {{ color | async }} -->
+<!-- [class.color] = "isSpecial ? 'red' : 'green'" -->
