@@ -2,7 +2,6 @@ import { Component, OnInit, EventEmitter, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, of, fromEvent, merge, Subscription} from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ValidateNumService } from '../services/validate-num.service';
 
 @Component({
   selector: 'app-form-control',
@@ -16,7 +15,6 @@ export class FormControlComponent implements OnInit, OnDestroy {
   color = new EventEmitter<boolean>();
   isSpecial: boolean = true;
 
-  // colorName = 'red';
 
   constructor() {
      console.log('constructor ran...')
@@ -28,7 +26,6 @@ export class FormControlComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     console.log('ngOnInit ran...')
-    // this.setCurrentClasses();
 
     this.number.valueChanges
     .pipe(
